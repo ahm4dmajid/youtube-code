@@ -3,7 +3,7 @@
  *
  * Problem Source: 
  * Problem URL: https://dmoj.ca/problem/dwite12c1p4
- * Tutorial: https://www.youtube.com/watch?v=CiYbDThPuJU
+ * Tutorial: https://www.youtube.com/watch?v=vkhb-XDl5m0
  * 
  * Author: Ahmad Maged
  * 
