@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define SIZE 255
 #define TEST_CASES 5
 
 typedef struct node
