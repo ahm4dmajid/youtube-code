@@ -159,28 +159,23 @@ int tree_height(node *tree)
 int tree_nodes(node *tree)
 {
     int total = 0;
-    stack *s = new_stack();
+    stack *stack = new_stack();
+    push_stack(stack, tree);
 
-    while (tree)
+    while (!is_empty_stack(stack))
     {
-        if (tree->left && tree->right)
-        {
-            push_stack(s, tree->left);
-            tree = tree->right;
-        }
-        else
-        {
-            if (is_empty_stack(s))
-                tree = NULL;
-            else
-                tree = pop_stack(s);
-        }
-        total++;
+	tree = pop_stack(stack);
+	total++;
+
+	if (tree->left && tree->right)
+	{
+	    push_stack(stack, tree->left);
+	    push_stack(stack, tree->right);
+	}
     }
 
     return total;
 }
-
 
 int tree_streets(node *tree)
 {
